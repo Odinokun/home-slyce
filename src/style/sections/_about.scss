@@ -1,0 +1,67 @@
+.about-sec {
+  background-color: #000;
+  background-image: url('../img/bg-menu.jpg');
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include min(768) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @include min(1024) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+}
+
+.about__pic,
+.about__text {
+  width: 100%;
+
+  @include min(1024) {
+    width: calc(50% - 60px);
+  }
+}
+
+.about__pic {
+  margin-top: 40px;
+
+  @include min(1024) {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about__title {
+  margin-bottom: 30px;
+  color: #fff;
+
+  @include responsive-font(60, 30);
+}
+
+.about__descr {
+  p {
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #fff;
+
+    @include responsive-font(25, 20);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

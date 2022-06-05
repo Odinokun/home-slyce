@@ -13,7 +13,8 @@ body {
 
 html {
   font-family: 'Encode Sans', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 400;
   color: #141414;
 }
 
@@ -21,6 +22,10 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -80,10 +85,6 @@ svg {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
@@ -107,36 +108,40 @@ svg {
 
 .btn {
   font-family: 'Encode Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1;
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  padding: 5px 25px;
+  height: 55px;
+  padding: 6px 38px;
   cursor: pointer;
   user-select: none;
   transition: all $transition;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 25px !important;
-  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 0 !important;
+  background-color: #d12a2f;
+
+  &:hover {
+    background-color: darken(#d12a2f, 10%);
+  }
+
+  svg {
+    flex: none;
+    fill: #fff;
+    width: 25px;
+    height: 23px;
+    margin-right: 20px;
+  }
 
   span {
     position: relative;
     display: block;
-  }
-}
-
-.btn--blue {
-  color: $white;
-  background-color: $brand;
-
-  &:hover {
-    background-color: $brand-hov;
   }
 }

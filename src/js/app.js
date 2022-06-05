@@ -1,9 +1,8 @@
 $(function() {
 
-  // begin SVG for IE
   require('./modules/svg4everybody')();
-
-  // begin no-JS
   require('./modules/slick')();
+  require('./modules/scroll2ancor')();
+  require('./modules/menu')();
 
 });

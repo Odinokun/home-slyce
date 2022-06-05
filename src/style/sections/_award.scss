@@ -1,0 +1,49 @@
+.award-sec {
+  background-image: url('../img/bg-awards.jpg');
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: cover;
+
+  @include min(480) {
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    @include min(768) {
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+
+.award__title {
+  margin-bottom: 30px;
+  color: #fff;
+
+  @include responsive-font(70, 40);
+}
+
+.award__deskr {
+  max-width: 450px;
+  color: #fff;
+}
+
+.award__btn {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 35px;
+
+  @include min(768) {
+    width: auto;
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+}

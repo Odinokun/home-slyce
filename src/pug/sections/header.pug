@@ -1,0 +1,40 @@
+//- begin header
+header.header
+  .container
+    a(href="#top").header__logo.scroll
+      img(src="assets/img/logo.png" alt="Home Slyce")
+    include ../elements/burger
+
+    .header__menu.menu#menu
+      nav.menu__nav
+        ul.menu__list
+          li.menu__item
+            a(href="#about").menu__link.scroll About Us
+          li.menu__item
+            a(href="#photo").menu__link.scroll Photo
+          li.menu__item
+            a(href="#contacts").menu__link.scroll Contacts Us
+      a(href="#contacts").menu__btn.btn.scroll
+        svg
+            use(xlink:href="assets/img/sprite.svg#cart")
+        span Make order
+
+      .header__bottom
+        .container
+          .header__bottom-phone
+            +svg('phone')
+            a(href="tel:+14435014000") +1 443-501-4000
+          ul.header__bottom-socials
+            li.header__bottom-social
+              a(href="" target="_blank").header__bottom-social-link
+                +svg('fb')
+            li.header__bottom-social
+              a(href="" target="_blank").header__bottom-social-link
+                +svg('inst')
+            li.header__bottom-social
+              a(href="" target="_blank").header__bottom-social-link
+                +svg('in')
+            li.header__bottom-social
+              a(href="" target="_blank").header__bottom-social-link
+                +svg('youtube')
+//- end   header
