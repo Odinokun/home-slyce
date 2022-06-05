@@ -1,17 +1,49 @@
-//begin popup
-.popup__layer
-.popup
+.popup__bg#popup__bg
+
+//begin popup-callback
+.popup.popup__callback.popup-callback#popup-callback
   .popup__close
-    +svg('close')
-  .popup__header
-    h2.popup__title Write Review
-  .popup__body
-    // begin schedule-item__form
-    form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
-          input(type='submit' value='send')
-    // begin schedule-item__form
-//end popup
+  .popup-callback__inn
+    h2.popup-callback__title Оставить заявку
+    .popup-callback__descr Наш менеджер обязательно свяжется с вами в ближайшее время
+    //begin callback__form
+    form.callback__form
+      input(placeholder="Ваше имя").callback__input
+      input(placeholder="Телефон").callback__input
+      a(href="#").callback__btn.btn
+        span Отправить заявку
+    //end callback__form
+//end popup-callback
+
+//begin popup-sale
+.popup.popup__sale.popup-sale#popup-sale
+  .popup__close
+  .popup-sale__inn
+    .popup-sale__left
+      h2.popup-sale__title Отдел продаж
+      .popup-sale__adress г. Алматы, ул. Январская, 57
+      .popup-sale__schedule Работаем с 09.00 до 20.00 с понедельника по субботу
+      a(href="tel:+77000077070").popup-sale__phone
+        .popup-sale__phone-text +7 700 007 70 70
+        .popup-sale__phone-whatsapp
+          +svg('whatsapp')
+
+    .popup-sale__right
+      .popup-sale__maps
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").popup-sale__map
+          img(src="assets/img/google-map.png" alt="picture")
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").popup-sale__map
+          img(src="assets/img/yandex-map.png" alt="picture")
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").popup-sale__map
+          img(src="assets/img/2-gis.png" alt="picture")
+//end popup-sale
+
+//begin popup-camera
+.popup.popup__camera.popup-camera#popup-camera
+  .popup__close
+//end popup-camera
+
+//begin popup-vr
+.popup.popup__vr.popup-vr#popup-vr
+  .popup__close
+//end popup-vr

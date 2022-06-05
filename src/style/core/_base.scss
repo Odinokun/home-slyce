@@ -12,10 +12,9 @@ body {
 }
 
 html {
-  font-family: $font;
+  font-family: 'Encode Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.38;
-  color: $text;
+  color: #141414;
 }
 
 body {
@@ -30,49 +29,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-bold;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 10px 0;
-}
-
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
 }
 
 p {
   margin: 0 0 10px 0;
+
   strong {
-    font-family: $font-bold;
+    font-weight: 500;
   }
 }
 
 a {
-  transition: color $transition-hover;
   text-decoration: none;
-  color: $link;
-  &:hover {
-    color: $link-hov;
-  }
 }
 
 ol,
@@ -82,36 +52,12 @@ ul {
   }
 }
 
-ul {
-  li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
-  }
-}
-
-//кастомные пункты списка с цифрами
-ol {
-  // list-style: none;
-  // @include counter(li);
-  li::before {
-    // color: $brand;
-  }
-}
-
 input,
 textarea,
 select,
 button {
   border-radius: 0 !important;
   outline: none;
-}
-
-input {
-  padding: 3px 10px 5px 10px;
-  color: $text;
-  border: 1px solid $text;
-
-  @include placeholder-color($text);
 }
 
 textarea {
@@ -129,44 +75,12 @@ svg {
   overflow: visible;
 }
 
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
 .main-wrap {
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
-  //свойство для исправления бага 100vh для мобильных
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height:         fill-available;
-  //свойство для плавной прокрутки на яблоках
 
-  -webkit-overflow-scrolling: touch;
   &.no-scroll {
     overflow: hidden;
   }
@@ -179,7 +93,50 @@ ol > *:not(li) {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
+
+  @include min(768) {
+    padding: 0 40px;
+  }
+  @include min(1024) {
+    padding: 0 80px;
+  }
+}
+
+.btn {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 5px 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: all $transition;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 25px !important;
+  background-color: transparent;
+
+  span {
+    position: relative;
+    display: block;
+  }
+}
+
+.btn--blue {
+  color: $white;
+  background-color: $brand;
+
+  &:hover {
+    background-color: $brand-hov;
+  }
 }

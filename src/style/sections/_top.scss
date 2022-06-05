@@ -1,0 +1,29 @@
+.top-sec {
+  background-color: #000;
+  background-image: url('../img/bg-top.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.top-sec__title {
+  padding-left: 20px;
+  color: #fff;
+
+  @include responsive-font(80, 50);
+  @include min(768) {
+    padding-left: 50px;
+  }
+  @include min(1024) {
+    padding-left: 100px;
+  }
+}
