@@ -1,0 +1,32 @@
+.up {
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: $transition;
+  opacity: 0;
+  background-color: #fff;
+
+  @include min(768) {
+    right: 50px;
+    bottom: 50px;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  svg {
+    width: 17px;
+    height: 20px;
+
+    stroke: #2b2b2b;
+    stroke-width: 2px;
+  }
+}

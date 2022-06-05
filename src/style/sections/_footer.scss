@@ -4,14 +4,15 @@
 
   .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-   flex-direction: column;
-    align-items: center;
     text-align: center;
+
     @include min(768) {
-    justify-content: space-between;
-        flex-direction: row;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }
@@ -20,6 +21,7 @@
   display: block;
   max-width: 200px;
   margin-bottom: 30px;
+
   @include min(768) {
     margin-bottom: 0;
   }
@@ -29,7 +31,8 @@
     width: 100%;
   }
 }
-.footer__copyright{
-  color: #fff;
+
+.footer__copyright {
   font-size: 16px;
+  color: #fff;
 }
