@@ -1,7 +1,7 @@
-module.exports = function() {
+module.exports = function () {
 
   // begin mobile menu
-  $('#burger input').on('click', function (){
+  $('#burger input').on('click', function () {
     $('#menu').toggleClass('active');
     $('body').toggleClass('no-scroll');
   })

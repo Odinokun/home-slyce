@@ -22,8 +22,9 @@
   z-index: 1;
   max-width: 250px;
 
-  @include min(1024) {
+  @include min(1200) {
     max-width: 370px;
+
   }
 
   img {

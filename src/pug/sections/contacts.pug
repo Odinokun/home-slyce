@@ -1,0 +1,46 @@
+//- begin contacts-sec
+.contacts-sec#contacts
+  .container
+    //- begin contacts__left
+    .contacts__left
+      h2.contacts__title Contacts Us
+      a(href="https://goo.gl/maps/25v7mcFsnKgq9h818" target="_blank" rel="nofollow noopener noreferrer").contacts__address 2 E Wells St, Baltimore, MD 21230
+      .contacts__links
+        a(href="tel:+14435014000").contacts__link
+          .contacts__link-icon
+            +svg('phone')
+          span +1 443-501-4000
+        a(href="mailto:info@incentivio.com").contacts__link
+          .contacts__link-icon
+            +svg('mail')
+          span info@incentivio.com
+        a(href="https://www.incentivio.com/").contacts__link
+          .contacts__link-icon
+            +svg('planet')
+          span incentivio.com
+      h3.contacts__subtitle Social Media
+      ul.contacts__socials
+        li.contacts__social
+          a(href="" target="_blank").contacts__social-link
+            +svg('fb')
+        li.contacts__social
+          a(href="" target="_blank").contacts__social-link
+            +svg('inst')
+        li.contacts__social
+          a(href="" target="_blank").contacts__social-link
+            +svg('in')
+        li.contacts__social
+          a(href="" target="_blank").contacts__social-link
+            +svg('youtube')
+    //- end   contacts__left
+
+    //- begin contacts__right
+    .contacts__right
+      form.contacts__form
+        .contacts__form-row
+          input(type="text" placeholder="Name *" required)
+          input(type="email" placeholder="Email *" required)
+        textarea(placeholder="Message *" required)
+        button.contacts__btn.btn Send message
+    //- end   contacts__right
+//- end   contacts-sec

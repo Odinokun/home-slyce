@@ -1,0 +1,31 @@
+.party-sec {
+  background-color: #000;
+  background-image: url('../img/bg-party.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.party__title {
+  color: $highlight;
+  margin-bottom: 30px;
+  font-weight: 400;
+  @include responsive-font(80, 50);
+}
+
+.party__subtitle {
+  color: #fff;
+
+  @include responsive-font(25, 20);
+}
